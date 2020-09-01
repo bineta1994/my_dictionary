@@ -10,7 +10,7 @@ app.config["MONGO_URI"] = 'mongodb+srv://nita:Bineta1994@myclustername.le6rk.mon
 mongo = PyMongo(app)
 
 
-@app.route('/word')
+@app.route('/')
 def word():
     return render_template("words.html", words=mongo.db.words.find())
 
