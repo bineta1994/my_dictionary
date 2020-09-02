@@ -1,23 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
-     {% for entry in words %}
-        {{ entry.word}}
-        {{ entry.description}}
-        {{ entry.date }}
-
 <ul class="collapsible">
+    {% for entry in words %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    
+       <div class="collapsible-header">
+                <div class="word_header col s9">
+                    <strong>{{entry.word}}</strong>
+                </div>
+                <div class="col s3">
+                    <i class="material-icons">add</i>
+                    <a class="waves-effect waves-light btn btn_small">Delete</a>
+                    <a href="{{ url_for('edit_word', word_id= word._id) }}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    
+                </div>
+        </div>
+       
+      <div class="collapsible-body">
+       <span>
+          <p> Definition: {{ entry.definition}}</p>
+          <p>Posted: {{ entry.date }}</p>
+          <p>Posted By: {{ entry.author}}</p>
+       </span>
+      </div>
     </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-  </ul>
+
     {% endfor %}
+  </ul>
+    
 {% endblock %}

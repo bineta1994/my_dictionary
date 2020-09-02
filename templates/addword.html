@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Please add Word</h3>
+<div class="row">
+    <form  action="{{ url_for('insert_word') }}" method="POST" class="col s12">
+        
+            <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input name="word" id="word" class="validate">
+                <label for="icon_prefix">Word</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <textarea name="definition" id="definition" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Definition</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <input name="author" id="author" class="validate">
+                <label for="icon_telephone">Author</label>
+            </div>
+
+            <div id="matfix" class="input-field col s12">
+                <i class="material-icons prefix">today</i>
+                <input id="date" name="date" type="text" class="datepicker">
+                <label for="icon_prefix">Date Posted</label>
+            </div>
+
+            <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add Word
+                <i class="material-icons right"></i>
+             </button>
+           </div>
+         
+       
+    </form>
+</div>
+{% endblock %}

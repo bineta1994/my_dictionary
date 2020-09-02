@@ -11,13 +11,25 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-def word():
+def words():
     return render_template("words.html", words=mongo.db.words.find())
 
-@app.route('/add')
-def add():
-    return "hello there"
+@app.route('/add_word')
+def add_word():
+    return render_template('addword.html')
 
+@app.route('/insert_task', methods=['POST'])
+def insert_word():
+    words = mongo.db.words
+    words.insert_one(request.form.to_dict())
+    return redirect(url_for('words'))
+
+@app.route('/edit_word/<word_id>')
+def edit_word(word_id):
+    the_word =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    all_words =  mongo.db.words.find()
+    return render_template('editword.html', word=the_word,
+                           all_words=all_words)
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
