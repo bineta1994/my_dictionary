@@ -26,7 +26,7 @@ def insert_word():
 
 @app.route('/edit_word/<word_id>')
 def edit_word(word_id):
-    the_word =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    the_word =  mongo.db.words.find_one({"_id": ObjectId(word_id)})
     all_words =  mongo.db.words.find()
     return render_template('editword.html', word=the_word,
                            all_words=all_words)
