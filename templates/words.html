@@ -5,16 +5,16 @@
     <li>
     
        <div class="collapsible-header">
-         
+                <div class="col s6">
+                    <a class="waves-effect waves-light btn btn_small"><i class="material-icons">delete</i></a>
+                    <a href="{{ url_for('edit_word', word_id= entry._id) }}" class="waves-effect waves-light btn btn_small blue"><i class="material-icons">create</i></a>
+                    <i class="material-icons">add</i>
+                    
+                </div>
                 <div class="word_header col s6">
                     <strong>{{entry.word}}</strong>
                 </div>
-                <div class="col s6">
-                    <i class="material-icons">add</i>
-                    <a class="waves-effect waves-light btn btn_small">Delete</a>
-                    <a href="{{ url_for('edit_word', word_id= entry._id) }}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                    
-                </div>
+                
         </div>
        
       <div class="collapsible-body">

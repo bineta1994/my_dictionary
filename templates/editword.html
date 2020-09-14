@@ -1,27 +1,27 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Edit dictionary</h3>
 <div class="row">
-    <form  action="{{ url_for('insert_word') }}" method="POST" class="col s12">
+    <form  action="{{ url_for('update_word', word_id=word._id) }}"" method="POST" class="col s12">
         
             <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
-                <input name="word" id="word" class="validate">
+                <input name="word" id="word" class="validate" value= "{{ word.word}}">
                 <label for="icon_prefix">Word</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">phone</i>
-                <textarea name="definition" id="definition" class="materialize-textarea"></textarea>
+                <textarea name="definition" id="definition" class="materialize-textarea"  value= "{{ word.definition}}"></textarea>
                 <label for="icon_telephone">Definition</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">phone</i>
-                <input name="author" id="author" class="validate">
+                <input name="author" id="author" class="validate"  value= "{{ word.author}}">
                 <label for="icon_telephone">Author</label>
             </div>
 
             <div id="matfix" class="input-field col s12">
                 <i class="material-icons prefix">today</i>
-                <input id="date" name="date" type="text" class="datepicker">
+                <input id="date" name="date" type="text" class="datepicker"  value= "{{ word.date}}">
                 <label for="icon_prefix">Date Posted</label>
             </div>
 
@@ -34,4 +34,12 @@
        
     </form>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        date_posted = Date.parse('{{word.date}}');
+        $('#date').pickadate('picker').set('select', due_posted, { format: 'dd/mm/yyyy' }).trigger('change');
+    });
+</script>
 {% endblock %}

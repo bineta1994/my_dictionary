@@ -18,7 +18,7 @@ def words():
 def add_word():
     return render_template('addword.html')
 
-@app.route('/insert_task', methods=['POST'])
+@app.route('/insert_word', methods=['POST'])
 def insert_word():
     words = mongo.db.words
     words.insert_one(request.form.to_dict())
@@ -30,6 +30,19 @@ def edit_word(word_id):
     all_words =  mongo.db.words.find()
     return render_template('editword.html', word=the_word,
                            all_words=all_words)
+
+@app.route('/update_word/<word_id>', methods=["POST"])
+def update_task(word_id):
+    words = mongo.db.words
+    words.update( {'_id': ObjectId(word_id)},
+    {
+        'word':request.form.get('word'),
+        'definition':request.form.get('definition'),
+        'author': request.form.get('author'),
+        'date': request.form.get('date'),
+    })
+    return redirect(url_for('words'))
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

@@ -4,16 +4,40 @@
     line-height: 24px;
     margin: 5px 5px;
     padding: 0 0.5em;
+    background-color: red;
 }
 
 .word_header {
     margin-top: 5px;
+    text-transform: capitalize;
 }
 
 body {
-    background: url(../images/words.jpg)
+    background: url(../images/words.jpg);
+
 }
 
 nav {
     background-color: darkgoldenrod;
+
+    
+}
+
+.collapsible {
+    background-color: rgb(202, 103, 27);
+    border: 10px dotted blue;
+}
+
+form {
+    background-color: rgb(202, 103, 27);
+    
+}
+
+h3 {
+    background-color: rgb(202, 103, 27);
+   
+}
+
+.icons-bg {
+   background-color: whitesmoke;
 }
