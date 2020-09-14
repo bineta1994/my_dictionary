@@ -32,7 +32,7 @@ def edit_word(word_id):
                            all_words=all_words)
 
 @app.route('/update_word/<word_id>', methods=["POST"])
-def update_task(word_id):
+def update_word(word_id):
     words = mongo.db.words
     words.update( {'_id': ObjectId(word_id)},
     {
