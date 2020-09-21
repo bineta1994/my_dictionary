@@ -1,39 +1,59 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# **Dictionary**
 
-Welcome bineta1994,
+The website is for users to add words and definitions to a digital dictionary.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+## **UX**
 
-## Gitpod Reminders
+The website is laid out in a way that allows users to navigate with ease. It also provides the kind of information they would expect. The about us page has all the words displayed for the users to see.There's familiarity and uniformity in the color sheme and layout of the website.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### **user stories**:
+As a user type, when visiting a website I look at the homepage to give me a brief introduction of what the website is about, the title lets me know that the website is a dictionary.
 
-`python3 -m http.server`
+As a user type, I want to jump from one section to a specific section, the navigation bar and the buttons help me with that.
 
-A blue button should appear to click: *Make Public*,
+As a user type, i found the color combination appealing and helped distinguish different parts of the website.
 
-Another blue button should appear to click: *Open Browser*.
+## **Features**
+ 
+**Home and Dictionary**: The homepage has the logo and the all the words displayed. Users are able to see what the website is about by those features.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**Add words**: This page allows users to add words to the dictionary.
 
-A blue button should appear to click: *Make Public*,
+**Buttons**
 
-Another blue button should appear to click: *Open Browser*.
+The bottons are a great way to direct users from one section to another. It just increases the ease with which users are able to interact with the website.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+## **Technologies Used**
 
-## Updates Since The Instructional Video
+**Html and CSS**
+the project uses html and css to build and style the website. Thesed two technologies compliment each other.
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+**Javascript**
+Used javascript from materialize to add interactivity.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+**Materialize**
+most of my html code was retrieved from materialize.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+**Inspect/ Toggle device toolbar**
+Used these tools to test the responsiveness of the website in different browser sizes like: desktop, mobile, and tablet. And made chnages accordingly to the website to enhance their responsivess and layout.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+**Gitpod**
+Used this tool to create my codes.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Github**
+Used github to store my data and to host my website.
 
---------
+## **Testing**
 
-Happy coding!
+added javascrip from materialize to make the navbar responsive and mobile friendly.
+
+## **Deployment**
+
+I have been committing and storing my work on github throughout the development process. 
+The project is deployed to github. Github provides us a link to access the project.
+
+## **Credits**
+
+**media**
+Got background image from [github]
+(https://www.kelliworrall.com/2018/10/04/why-we-need-to-watch-our-words/)

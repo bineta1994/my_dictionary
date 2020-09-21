@@ -4,7 +4,7 @@
     line-height: 24px;
     margin: 5px 5px;
     padding: 0 0.5em;
-    background-color: red;
+    background-color: rgb(202, 103, 27);
 }
 
 .word_header {
@@ -15,17 +15,26 @@
 body {
     background: url(../images/words.jpg);
 
+
 }
 
 nav {
-    background-color: darkgoldenrod;
+    background-color: rgb(202, 103, 27);
 
     
 }
 
+.container {
+    margin-top: 50px;
+}
+
 .collapsible {
     background-color: rgb(202, 103, 27);
-    border: 10px dotted blue;
+    border: 10px solid rgb(202, 103, 27);;
+}
+
+.collapsible-header {
+    background-color: background-color: rgb(202, 103, 27);
 }
 
 form {
@@ -40,4 +49,9 @@ h3 {
 
 .icons-bg {
    background-color: whitesmoke;
+}
+
+.edit-button {
+    background-color: black;
+    margin-left: 60px;
 }
