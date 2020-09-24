@@ -28,11 +28,17 @@ The bottons are a great way to direct users from one section to another. It just
 **Html and CSS**
 the project uses html and css to build and style the website. Thesed two technologies compliment each other.
 
-**Javascript**
-Used javascript from materialize to add interactivity.
+**Javascript/ jquery**
+Used javascript/jquery from materialize to add interactivity.
+
+**python/flask**
+used python and flask to handle the backend logic of the program and to render templates.
 
 **Materialize**
 most of my html code was retrieved from materialize.
+
+**MongoDB**
+used mongo DB to create a database, which was used to create the frontend website
 
 **Inspect/ Toggle device toolbar**
 Used these tools to test the responsiveness of the website in different browser sizes like: desktop, mobile, and tablet. And made chnages accordingly to the website to enhance their responsivess and layout.
@@ -43,6 +49,9 @@ Used this tool to create my codes.
 **Github**
 Used github to store my data and to host my website.
 
+**heroku**
+used heroku to deploy the project
+
 ## **Testing**
 
 added javascrip from materialize to make the navbar responsive and mobile friendly.
@@ -50,7 +59,7 @@ added javascrip from materialize to make the navbar responsive and mobile friend
 ## **Deployment**
 
 I have been committing and storing my work on github throughout the development process. 
-The project is deployed to github. Github provides us a link to access the project.
+The project is deployed to github. Github provides us a link to access the project. I also deployed the project to heroku
 
 ## **Credits**
 
