@@ -5,14 +5,15 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'dictionary'
-app.config["MONGO_URI"] = 'mongodb+srv://nita:Bineta1994@myclustername.le6rk.mongodb.net/dictionary?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
 mongo = PyMongo(app)
 
 
 @app.route('/')
 def words():
-    return render_template("words.html", words=mongo.db.words.find())
+    total_words= mongo.db.words.count()
+    return render_template("words.html", words=mongo.db.words.find(), total_words=total_words)
 
 @app.route('/add_word')
 def add_word():
